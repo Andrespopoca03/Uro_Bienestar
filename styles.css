@@ -1,0 +1,628 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Color claro para el fondo general */
+    color: white; /* Cambiamos todas las letras a blanco de manera global */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de fade-in al cargar la página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de fade-in con desplazamiento */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el header y navbar */
+header {
+    background-color: #0B132B;
+    margin-top: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white; /* Enlaces también en blanco */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #6FFFE9;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1C2541;
+    color: white; /* Texto de la sección hero en blanco */
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-family: 'Georgia', serif;
+    font-size: 48px;
+    color: white; /* El título principal también en blanco */
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: white; /* Texto en blanco */
+}
+
+/* Sección de información */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f4f8; /* Fondo claro */
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 0.5s forwards;
+}
+.info-item img {
+    display: block; /* Convertimos la imagen en un bloque para poder centrarla */
+    margin: 0 auto; /* Centramos la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño de su contenedor */
+    border-radius: 15px; /* Redondea los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+
+.info-item {
+    width: 45%;
+    background-color: #3A506B;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    color: white; /* Texto de las secciones en blanco */
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-item h2 {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    color: white; /* Título de las secciones en blanco */
+    margin-bottom: 15px;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: white; /* Texto en blanco */
+}
+
+/* Botones */
+.btn-call, .btn-submit {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #5BC0BE;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-call:hover, .btn-submit:hover {
+    background-color: #3A506B;
+    transform: scale(1.05);
+}
+
+/* Sección de mapa */
+.map-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de Agenda tu Cita */
+.appointment-section {
+    margin: 0; /* Eliminar márgenes para que ocupe todo el ancho */
+    padding: 50px 0; /* Espacio superior e inferior */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    background-color: #1C2541;
+    color: white;
+    border-radius: 0; /* Eliminar bordes redondeados */
+    box-shadow: none; /* Eliminar sombras */
+    animation: fadeInUp 2s ease;
+}
+
+.appointment-section h2 {
+    font-size: 32px;
+    text-align: center;
+    color: white; /* Título de la sección en blanco */
+    margin-bottom: 20px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px; /* Ancho máximo para evitar que los campos sean demasiado amplios */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+.appointment-form label {
+    font-size: 18px;
+    color: white; /* Etiquetas en blanco */
+}
+
+.appointment-form input,
+.appointment-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #3A506B; /* Fondo de los inputs más oscuro */
+    color: white; /* Texto de los inputs en blanco */
+}
+
+.appointment-form .radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* Sección de productos y medicamentos */
+.productos-section {
+    padding: 40px 20px;
+    background-color: #1C2541; /* Fondo oscuro para la sección de productos */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.productos-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.productos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #3A506B;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #6FFFE9;
+}
+
+.producto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.producto button {
+    padding: 10px 20px;
+    background-color: #5BC0BE;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #3A506B;
+    transform: scale(1.05);
+}
+
+/* Sección del carrito */
+.carrito-section {
+    padding: 40px 20px;
+    background-color: #0B132B; /* Fondo oscuro para el carrito */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.carrito-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.carrito-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+.carrito-section ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.carrito-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.carrito-section button {
+    padding: 10px 20px;
+    background-color: #5BC0BE;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carrito-section button:hover {
+    background-color: #3A506B;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #0B132B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 2s forwards;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .appointment-section {
+        padding: 20px; /* Ajustamos el relleno en dispositivos pequeños */
+    }
+
+    .appointment-form {
+        width: 90%; /* El formulario será más ancho en pantallas pequeñas */
+    }
+
+    .productos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 80%;
+    }
+}
+
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: white; /* Cambiamos todas las letras a blanco de manera global */
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    margin-top: 30px;
+    background-color: #1C2541; /* Fondo azul para el h1 */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de fade-in con desplazamiento */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #1C2541;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #6FFFE9;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#searchInput {
+    padding: 10px 20px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de productos */
+.productos-section {
+    padding: 40px 20px;
+    background-color: #0B132B; /* Fondo azul oscuro */
+}
+
+.productos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #3A506B;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #6FFFE9;
+}
+
+.producto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.producto button {
+    padding: 10px 20px;
+    background-color: #5BC0BE;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #3A506B;
+    transform: scale(1.05);
+}
+
+/* Sección del carrito */
+.carrito-section {
+    padding: 40px 20px;
+    background-color: #1C2541;
+    text-align: center;
+}
+
+.carrito-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.carrito-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+.carrito-section ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.carrito-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.carrito-section button {
+    padding: 10px 20px;
+    background-color: #5BC0BE;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carrito-section button:hover {
+    background-color: #3A506B;
+    transform: scale(1.05);
+}
+
+.carrito-section ul button {
+    background-color: red;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.carrito-section ul button:hover {
+    background-color: darkred;
+}
+
+/* Footer */
+footer {
+    background-color: #0B132B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 2s forwards;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .productos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 80%;
+    }
+
+    #searchInput {
+        width: 80%;
+    }
+}
+     

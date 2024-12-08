@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicamentos Urológicos - Uro Bienestar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Medicamentos Urológicos</h1>
+
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#medicamentos">Medicamentos</a></li>
+    </ul>
+</nav>
+
+<!-- Barra de búsqueda -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar medicamentos..." onkeyup="filtrarProductos()">
+</div>
+
+<!-- Sección de Medicamentos -->
+<section id="medicamentos" class="productos-section">
+
+    <!-- Sección: Disfunción Eréctil (DE) -->
+    <h2>Disfunción Eréctil (DE)</h2>
+    <div class="productos-list">
+        <div class="producto" data-name="Sildenafil">
+            <img src="img/sildenafil.jpeg" alt="Sildenafil">
+            <h3>Sildenafil (Viagra)</h3>
+            <p>Facilita el flujo sanguíneo al pene. Utilizado para la disfunción eréctil (DE).</p>
+            <p>Precio: $700</p>
+            <button onclick="agregarAlCarrito(1, 700)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Tadalafil">
+            <img src="img/tadalafil.jpeg" alt="Tadalafil">
+            <h3>Tadalafil (Cialis)</h3>
+            <p>Tratamiento de disfunción eréctil (DE) y Hiperplasia Prostática Benigna (HPB).</p>
+            <p>Precio: $650</p>
+            <button onclick="agregarAlCarrito(2, 650)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Vardenafil">
+            <img src="img/vardenafil.jpeg" alt="Vardenafil">
+            <h3>Vardenafil (Levitra)</h3>
+            <p>Otro inhibidor de la PDE5 utilizado para la disfunción eréctil.</p>
+            <p>Precio: $720</p>
+            <button onclick="agregarAlCarrito(3, 720)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Avanafil">
+            <img src="img/avanafil.jpeg" alt="Avanafil">
+            <h3>Avanafil (Stendra)</h3>
+            <p>Medicamento para el tratamiento de la disfunción eréctil con acción rápida.</p>
+            <p>Precio: $800</p>
+            <button onclick="agregarAlCarrito(4, 800)">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <!-- Sección: Infecciones del Tracto Urinario (ITU) -->
+    <h2>Infecciones del Tracto Urinario (ITU)</h2>
+    <div class="productos-list">
+        <div class="producto" data-name="Ciprofloxacino">
+            <img src="img/ciprofloxacino.jpeg" alt="Ciprofloxacino">
+            <h3>Ciprofloxacino</h3>
+            <p>Antibiótico de amplio espectro. Utilizado para infecciones del tracto urinario (ITU).</p>
+            <p>Precio: $500</p>
+            <button onclick="agregarAlCarrito(5, 500)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Nitrofurantoína">
+            <img src="img/nitrofurantoina.jpeg" alt="Nitrofurantoína">
+            <h3>Nitrofurantoína</h3>
+            <p>Antibiótico específico para infecciones urinarias no complicadas.</p>
+            <p>Precio: $350</p>
+            <button onclick="agregarAlCarrito(6, 350)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Fosfomicina">
+            <img src="img/fosfomicina.jpeg" alt="Fosfomicina">
+            <h3>Fosfomicina</h3>
+            <p>Antibiótico utilizado para tratar infecciones urinarias no complicadas.</p>
+            <p>Precio: $400</p>
+            <button onclick="agregarAlCarrito(7, 400)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Amoxicilina">
+            <img src="img/amoxicilina.jpeg" alt="Amoxicilina">
+            <h3>Amoxicilina</h3>
+            <p>Antibiótico utilizado para una variedad de infecciones urinarias.</p>
+            <p>Precio: $300</p>
+            <button onclick="agregarAlCarrito(8, 300)">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <!-- Sección: Hiperplasia Prostática Benigna (HPB) -->
+    <h2>Hiperplasia Prostática Benigna (HPB)</h2>
+    <div class="productos-list">
+        <div class="producto" data-name="Tamsulosina">
+            <img src="img/tamsulosina.jpeg" alt="Tamsulosina">
+            <h3>Tamsulosina</h3>
+            <p>Relaja los músculos de la próstata y la vejiga. Utilizado para Hiperplasia Prostática Benigna (HPB).</p>
+            <p>Precio: $400</p>
+            <button onclick="agregarAlCarrito(9, 400)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Finasteride">
+            <img src="img/finasteride.jpeg" alt="Finasteride">
+            <h3>Finasteride</h3>
+            <p>Reduce el tamaño de la próstata. Utilizado para Hiperplasia Prostática Benigna (HPB).</p>
+            <p>Precio: $350</p>
+            <button onclick="agregarAlCarrito(10, 350)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Dutasteride">
+            <img src="img/dutasteride.jpeg" alt="Dutasteride">
+            <h3>Dutasteride (Avodart)</h3>
+            <p>Reduce el tamaño de la próstata y ayuda a aliviar los síntomas urinarios.</p>
+            <p>Precio: $600</p>
+            <button onclick="agregarAlCarrito(11, 600)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Terazosina">
+            <img src="img/terazosina.jpeg" alt="Terazosina">
+            <h3>Terazosina</h3>
+            <p>Ayuda a relajar los músculos de la vejiga y la próstata, utilizado para HPB.</p>
+            <p>Precio: $450</p>
+            <button onclick="agregarAlCarrito(12, 450)">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <!-- Sección: Incontinencia Urinaria -->
+    <h2>Incontinencia Urinaria</h2>
+    <div class="productos-list">
+        <div class="producto" data-name="Oxybutinina">
+            <img src="img/oxybutinina.jpeg" alt="Oxybutinina">
+            <h3>Oxybutinina</h3>
+            <p>Relaja los músculos de la vejiga y se utiliza para tratar la incontinencia urinaria.</p>
+            <p>Precio: $450</p>
+            <button onclick="agregarAlCarrito(13, 450)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Tolterodina">
+            <img src="img/tolterodina.jpeg" alt="Tolterodina">
+            <h3>Tolterodina (Detrol)</h3>
+            <p>Medicamento que controla la vejiga hiperactiva y reduce la urgencia urinaria.</p>
+            <p>Precio: $480</p>
+            <button onclick="agregarAlCarrito(14, 480)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Mirabegron">
+            <img src="img/mirabegron.jpeg" alt="Mirabegron">
+            <h3>Mirabegron (Myrbetriq)</h3>
+            <p>Relaja los músculos de la vejiga y mejora la capacidad de retener orina.</p>
+            <p>Precio: $520</p>
+            <button onclick="agregarAlCarrito(15, 520)">Agregar al Carrito</button>
+        </div>
+        <div class="producto" data-name="Solifenacina">
+            <img src="img/solifenacina.jpeg" alt="Solifenacina">
+            <h3>Solifenacina (Vesicare)</h3>
+            <p>Utilizado para tratar la vejiga hiperactiva y la incontinencia urinaria.</p>
+            <p>Precio: $490</p>
+            <button onclick="agregarAlCarrito(16, 490)">Agregar al Carrito</button>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- Sección de Carrito -->
+<section id="carrito" class="carrito-section">
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-lista"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button onclick="window.location.href='compra-productos.html'">Finalizar Compra</button>
+</section>
+
+<script>
+// Función para filtrar productos en tiempo real
+function filtrarProductos() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let productos = document.querySelectorAll('.producto');
+
+    productos.forEach(producto => {
+        let nombre = producto.dataset.name.toLowerCase();
+        if (nombre.includes(input)) {
+            producto.style.display = "block";
+        } else {
+            producto.style.display = "none";
+        }
+    });
+}
+
+// Inicializa el carrito desde localStorage o como un array vacío
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+// Función para agregar productos al carrito
+function agregarAlCarrito(productoId, precio) {
+    carrito.push({ productoId, precio });
+    actualizarCarrito();
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// Función para eliminar productos del carrito
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1); // Elimina el producto del carrito
+    actualizarCarrito();
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualiza el localStorage
+}
+
+// Función para actualizar la interfaz del carrito
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById('carrito-lista');
+    const total = document.getElementById('total');
+    listaCarrito.innerHTML = '';
+    let sumaTotal = 0;
+
+    carrito.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `Producto ID ${item.productoId} - $${item.precio} `;
+        const btnEliminar = document.createElement('button');
+        btnEliminar.textContent = 'Eliminar';
+        btnEliminar.onclick = () => eliminarDelCarrito(index);
+        li.appendChild(btnEliminar);
+        listaCarrito.appendChild(li);
+        sumaTotal += item.precio;
+    });
+
+    total.textContent = sumaTotal;
+}
+
+// Inicializa la interfaz del carrito al cargar la página
+actualizarCarrito();
+</script>
+
+</body>
+</html>

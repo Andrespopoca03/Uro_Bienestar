@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - Uro Bienestar</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animación de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animación de fade-in con desplazamiento */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0B132B;
+            padding: 15px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #6FFFE9;
+        }
+
+        /* Encabezado principal */
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            margin-top: 30px;
+            background-color: #1C2541;
+            padding: 20px;
+            border-radius: 8px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #6FFFE9;
+            font-size: 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        /* Sección de descripción */
+        .about-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1C2541;
+            margin-bottom: 50px;
+            border-radius: 8px;
+            animation: fadeInUp 1.3s ease-in-out;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Sección inferior: imagen/declaración y doctor */
+        .lower-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 50px;
+            background-color: #0B132B;
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        /* Estilo de la imagen o declaración */
+        .declaration-box {
+            width: 50%;
+            background-color: #3A506B;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .declaration-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .declaration-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .declaration-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        /* Tarjeta del doctor */
+        .doctor-card {
+            width: 300px;
+            background-color: #3A506B;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .doctor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .doctor-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #6FFFE9;
+        }
+
+        .doctor-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .lower-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .declaration-box, .doctor-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .declaration-box {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+                    <li><a href="index.php">Inicio</a></li>
+
+            <li><a href="medicamentos.html">Medicamentos</a></li>
+         <li><a href="IniciaSesion.html">Inicia Sesión</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <h1>Uro Bienestar</h1>
+    <h2>¿Quiénes Somos?</h2>
+
+    <!-- Sección de descripción -->
+    <section class="about-section">
+        <p>
+            Somos una clínica especializada en urología, ofreciendo atención profesional y accesible
+            para tratar las enfermedades urológicas más comunes. Contamos con un equipo de médicos expertos
+            y tecnología avanzada para asegurar el bienestar de nuestros pacientes.
+        </p>
+    </section>
+
+    <!-- Sección inferior: Imagen/Declaración y Doctor -->
+    <section class="lower-section">
+        <!-- Caja de la imagen/declaración -->
+        <div class="declaration-box">
+            <img src="img/doc1.jpeg" alt="Imagen o Declaración A">
+            <p>
+                En Uro Bienestar, nuestro compromiso es con la salud y la calidad de vida de nuestros pacientes.
+                Ofrecemos soluciones accesibles para el tratamiento de diversas condiciones urológicas.
+            </p>
+        </div>
+
+        <!-- Tarjeta del doctor especialista -->
+        <div class="doctor-card">
+            <img src="img/doc.jpeg" alt="Foto del Dr. Juan Pérez">
+            <h3>Dr. Juan Pérez</h3>
+            <p>Especialista en Urología</p>
+            <p>
+                El Dr. Juan Pérez es uno de los principales especialistas en Urología. Graduado de la Universidad Nacional,
+                cuenta con más de 20 años de experiencia en el tratamiento de diversas afecciones urológicas.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
